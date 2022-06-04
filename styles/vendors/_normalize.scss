@@ -190,6 +190,11 @@ select {
 	text-transform: none;
 }
 
+li,
+ul {
+	list-style: none;
+}
+
 /**
    * Correct the inability to style clickable types in iOS and Safari.
    */

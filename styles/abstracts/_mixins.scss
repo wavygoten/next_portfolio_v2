@@ -2,6 +2,29 @@
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
 
+/// Responsive breakpoint manager
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+	$raw-query: map-get($breakpoints, $breakpoint);
+
+	@if $raw-query {
+		$query: if(
+			type-of($raw-query) == "string",
+			unquote($raw-query),
+			inspect($raw-query)
+		);
+
+		@media (max-width: $query) {
+			@content;
+		}
+	} @else {
+		@error 'No value found for `#{$breakpoint}`. '
+		   + 'Please make sure it is defined in `$breakpoints` map.';
+	}
+}
+
 /// Event wrapper
 /// @author Harry Roberts
 /// @param {Bool} $self [false] - Whether or not to include current selector
@@ -29,5 +52,29 @@
 @mixin when-inside($context) {
 	#{$context} & {
 		@content;
+	}
+}
+
+/// Helper to size an element
+/// @author Kitty Giraudel
+/// @param {Length} $width
+/// @param {Length} $height
+@mixin size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+
+@mixin transition {
+	transition: 0.2s ease-in-out;
+	animation: slideRight;
+	animation-duration: 1s;
+}
+
+@keyframes slideRight {
+	from {
+		transform: translateX(0%);
+	}
+	to {
+		transform: translateX(50%);
 	}
 }

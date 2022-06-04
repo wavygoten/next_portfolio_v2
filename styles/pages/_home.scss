@@ -1,0 +1,6 @@
+.container {
+	background-color: #242424;
+	&[aria-roledescription="light"] {
+		background-color: #fff;
+	}
+}
