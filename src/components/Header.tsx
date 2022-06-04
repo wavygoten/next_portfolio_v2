@@ -9,7 +9,7 @@ const Header = (props: Props) => {
 	return (
 		<header>
 			<nav className="nav">
-				<div className="push-right" />
+				<span className="push-right" />
 				<ul className="nav-items">
 					<li className="nav__item">Profile</li>
 					<li className="nav__item">Projects</li>
@@ -25,7 +25,6 @@ const Header = (props: Props) => {
 						<li className="burgers"></li>
 						<li className="burgers"></li>
 					</ul>
-
 					<ul className="nav-mobile-menu">
 						<li className="mobile-menu__items">Profile</li>
 						<li className="mobile-menu__items">Projects</li>

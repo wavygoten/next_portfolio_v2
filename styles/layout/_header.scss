@@ -8,10 +8,6 @@ header {
 		justify-content: space-between;
 	}
 
-	.push-right {
-		flex: 1 1 auto;
-	}
-
 	.nav-items {
 		display: flex;
 		align-items: center;
@@ -31,6 +27,18 @@ header {
 
 	.nav-mobile {
 		display: none;
+
+		.nav-mobile-menu {
+			display: none;
+		}
+
+		// .mobile-menu__items {
+		// 	height: 30px;
+		// 	width: 30px;
+		// 	text-align: center;
+		// 	margin: 2rem;
+		// 	padding: 0 1rem;
+		// }
 	}
 
 	@include respond-to("medium") {
