@@ -18,6 +18,8 @@ $text-sizes: (
 /// @type Color
 $brand-color: rgb(229, 0, 80) !default;
 
+$dark-secondary: #252525 !default;
+
 /// Light grey
 /// @type Color
 $light-grey: rgb(237, 237, 237) !default;
@@ -33,6 +35,20 @@ $dark-grey: rgb(68, 68, 68) !default;
 /// Container's maximum width
 /// @type Length
 $max-width: 1536px !default;
+
+/// Theme map
+/// @prop {String} keys - Keys are identifiers mapped to a given color
+/// @prop {Map} values - Values are actual color properties
+$theme: (
+	"borderDark": rgb(47, 90, 139),
+	"borderLight": rgb(58, 110, 170),
+	"bgLight": #f2f2f2,
+	"bgDark": #1f1f1f,
+	"textLight": #000,
+	"textDark": #fff,
+	"light": #fff,
+	"dark": #000,
+) !default;
 
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length

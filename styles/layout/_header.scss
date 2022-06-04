@@ -14,10 +14,11 @@ header {
 		text-align: center;
 		border-bottom: 1px solid transparent;
 
-		.nav__item {
+		.nav-items__item {
 			padding: 16px 64px;
+			cursor: pointer;
 			&:hover {
-				transition: 0.2s ease-in-out;
+				color: map-get($map: $theme, $key: "borderLight");
 			}
 			[role="active"] {
 				border-bottom: 1px solid $brand-color;
@@ -27,18 +28,29 @@ header {
 
 	.nav-mobile {
 		display: none;
-
 		.nav-mobile-menu {
-			display: none;
+			position: absolute;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			padding: 2rem 0;
+			top: 80px;
+			left: 0;
+			z-index: -10;
+			transition: 200ms linear;
+			li {
+				padding: 1rem;
+				cursor: pointer;
+				&:hover {
+					color: map-get($map: $theme, $key: "borderLight");
+				}
+			}
 		}
-
-		// .mobile-menu__items {
-		// 	height: 30px;
-		// 	width: 30px;
-		// 	text-align: center;
-		// 	margin: 2rem;
-		// 	padding: 0 1rem;
-		// }
+		#collapsed {
+			top: -25%;
+		}
 	}
 
 	@include respond-to("medium") {

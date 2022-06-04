@@ -1,0 +1,31 @@
+.theme[data-theme="dark"] {
+	background-color: map-get($theme, "bgDark");
+	color: map-get($theme, "textDark");
+	border-color: map-get($theme, "borderDark");
+
+	.nav-burger__item {
+		background-color: map-get($map: $theme, $key: "light");
+	}
+	.nav-mobile-menu {
+		background-color: map-get($map: $theme, $key: "bgDark");
+		color: map-get($map: $theme, $key: "textDark");
+
+		// border-bottom: 3px solid map-get($map: $theme, $key: "borderDark");
+	}
+}
+.theme[data-theme="light"] {
+	background-color: map-get($theme, "bgLight");
+	color: map-get($theme, "textLight");
+	border-color: map-get($theme, "borderLight");
+	transition: 0.2s ease-in-out;
+
+	.nav-burger__item {
+		background-color: map-get($map: $theme, $key: "dark");
+	}
+	.nav-mobile-menu {
+		background-color: map-get($map: $theme, $key: "bgLight");
+		color: map-get($map: $theme, $key: "textLight");
+
+		// border-bottom: 3px solid map-get($map: $theme, $key: "borderLight");
+	}
+}

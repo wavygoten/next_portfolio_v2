@@ -64,17 +64,8 @@
 	height: $height;
 }
 
-@mixin transition {
+@mixin transition($animation) {
 	transition: 0.2s ease-in-out;
-	animation: slideRight;
+	animation: $animation;
 	animation-duration: 1s;
-}
-
-@keyframes slideRight {
-	from {
-		transform: translateX(0%);
-	}
-	to {
-		transform: translateX(50%);
-	}
 }
