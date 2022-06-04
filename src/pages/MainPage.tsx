@@ -20,7 +20,6 @@ const MainPage = (props: Props) => {
 			}}
 		>
 			<div className="theme" data-theme={isDark ? "dark" : "light"}>
-				{" "}
 				<div className="container">
 					<Header />
 				</div>

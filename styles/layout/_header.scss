@@ -8,6 +8,10 @@ header {
 		justify-content: space-between;
 	}
 
+	.theme-icon {
+		margin: 0 4rem;
+	}
+
 	.nav-items {
 		display: flex;
 		align-items: center;
@@ -39,7 +43,7 @@ header {
 			top: 80px;
 			left: 0;
 			z-index: -10;
-			transition: 200ms linear;
+			// transition: 200ms linear;
 			li {
 				padding: 1rem;
 				cursor: pointer;
@@ -48,8 +52,8 @@ header {
 				}
 			}
 		}
-		#collapsed {
-			top: -25%;
+		#menu-collapsed {
+			top: -186px;
 		}
 	}
 
@@ -60,7 +64,9 @@ header {
 		.nav-mobile {
 			display: flex;
 			flex-flow: column nowrap;
-			margin: 1px 0;
+		}
+		.theme-icon {
+			margin: 0;
 		}
 	}
 }

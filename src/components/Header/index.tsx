@@ -26,7 +26,10 @@ const Header = ({}: Props) => {
 						<li className="nav-burger__item"></li>
 						<li className="nav-burger__item"></li>
 					</ul>
-					<ul className="nav-mobile-menu" id={isBurgerOpen ? "" : "collapsed"}>
+					<ul
+						className="nav-mobile-menu"
+						id={isBurgerOpen ? "menu-open" : "menu-collapsed"}
+					>
 						<li className="nav-mobile-menu__item">Profile</li>
 						<li className="nav-mobile-menu__item">Projects</li>
 						<li className="nav-mobile-menu__item">Library</li>
