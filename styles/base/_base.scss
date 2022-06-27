@@ -1,7 +1,7 @@
 * {
-	margin: 0 auto;
+	margin: 0;
 	padding: 0;
-	transition: 0.2s ease-in-out;
+	box-sizing: border-box;
 	outline: none;
 }
 
@@ -10,7 +10,23 @@
  */
 html {
 	box-sizing: border-box;
+	scroll-behavior: smooth;
+	scroll-padding-top: 80px;
 }
+
+// body {
+// 	scrollbar-color: transparent;
+// }
+// @include respond-below("small") {
+// 	::-webkit-scrollbar {
+// 		display: none;
+// 		-webkit-appearance: none;
+// 	}
+// }
+// body {
+// 	width: 100%;
+// 	height: 100%;
+// }
 
 /**
    * Make all elements from the DOM inherit from the parent box-sizing

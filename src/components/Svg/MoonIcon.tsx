@@ -9,9 +9,9 @@ const MoonIcon = ({ isDark, ...props }: Props) => {
 			stroke="currentColor"
 			fill="currentColor"
 			viewBox="0 0 20 20"
-			color={isDark ? "#fff" : "000"}
-			height={23}
-			width={23}
+			color={isDark ? "#fff" : "#000"}
+			height={24}
+			width={24}
 			xmlns="http://www.w3.org/2000/svg"
 			{...props}
 		>

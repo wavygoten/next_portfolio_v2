@@ -1,0 +1,58 @@
+.contact {
+	.contact-wrapper {
+		@extend .v-stack-center;
+		padding-top: 2rem;
+		margin-top: 1rem;
+		margin-bottom: 8rem;
+	}
+	.contact-title {
+		font-size: get-font-size("xl");
+		font-weight: get-font-weight("bold");
+		margin-bottom: 4rem;
+	}
+	.contact-form {
+		padding: 2rem;
+		width: 100%;
+		border: 1px solid $dark-grey;
+		border-radius: 8px;
+		input {
+			padding: 0.5rem 1rem;
+			border: 1px solid $dark-grey;
+			border-radius: 8px;
+			margin-bottom: 1rem;
+			width: 100%;
+		}
+		textarea {
+			width: 100%;
+			padding: 1rem;
+			line-height: normal;
+			border-radius: 8px;
+			resize: none;
+		}
+
+		button {
+			padding: 0.5rem 1rem;
+			border-radius: 8px;
+			cursor: pointer;
+			margin-top: 1rem;
+		}
+
+		.form-group {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+			align-items: center;
+			&:last-child {
+				justify-content: center;
+			}
+			p {
+				padding-bottom: 1rem;
+			}
+		}
+	}
+	@include respond-to("medium") {
+		.contact-wrapper {
+			margin-bottom: 4rem;
+		}
+	}
+}

@@ -17,3 +17,12 @@
 		transform: translateX(50%);
 	}
 }
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

@@ -1,12 +1,20 @@
 import React, { useContext } from "react";
-import Image from "next/image";
-import { MainPageContext } from "../../contexts/MainPage.context";
+import { AppContext } from "../../store/context";
 import { MoonIcon, SunIcon } from "../Svg";
 const LightDarkIcon = () => {
-	const { isDark, toggleDark } = useContext(MainPageContext);
+	const { state, dispatch } = useContext(AppContext);
 	return (
-		<div className="theme-icon" onClick={toggleDark}>
-			{isDark ? <MoonIcon isDark={isDark} /> : <SunIcon isDark={isDark} />}
+		<div
+			className="theme-icon"
+			onClick={() => {
+				dispatch({ type: "isDark", payload: state.isDark });
+			}}
+		>
+			{state.isDark ? (
+				<MoonIcon isDark={state.isDark} />
+			) : (
+				<SunIcon isDark={state.isDark} />
+			)}
 		</div>
 	);
 };

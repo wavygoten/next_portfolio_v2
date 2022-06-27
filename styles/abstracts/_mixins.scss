@@ -25,6 +25,43 @@
 	}
 }
 
+@mixin respond-below($breakpoint) {
+	// If the breakpoint exists in the map.
+	@if map-has-key($breakpoints, $breakpoint) {
+		// Get the breakpoint value.
+		$breakpoint-value: map-get($breakpoints, $breakpoint);
+
+		// Write the media query.
+		@media (max-width: ($breakpoint-value - 1)) {
+			@content;
+		}
+
+		// If the breakpoint doesn't exist in the map.
+	} @else {
+		// Log a warning.
+		@warn 'Invalid breakpoint: #{$breakpoint}.';
+	}
+}
+
+// Respond above.
+@mixin respond-above($breakpoint) {
+	// If the breakpoint exists in the map.
+	@if map-has-key($breakpoints, $breakpoint) {
+		// Get the breakpoint value.
+		$breakpoint-value: map-get($breakpoints, $breakpoint);
+
+		// Write the media query.
+		@media (min-width: $breakpoint-value) {
+			@content;
+		}
+
+		// If the breakpoint doesn't exist in the map.
+	} @else {
+		// Log a warning.
+		@warn 'Invalid breakpoint: #{$breakpoint}.';
+	}
+}
+
 /// Event wrapper
 /// @author Harry Roberts
 /// @param {Bool} $self [false] - Whether or not to include current selector
@@ -55,6 +92,14 @@
 	}
 }
 
+@mixin make-container($padding-x: $container-padding-x) {
+	width: 100%;
+	padding-right: $padding-x;
+	padding-left: $padding-x;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 /// Helper to size an element
 /// @author Kitty Giraudel
 /// @param {Length} $width
@@ -65,7 +110,50 @@
 }
 
 @mixin transition($animation) {
-	transition: 0.2s ease-in-out;
 	animation: $animation;
 	animation-duration: 1s;
+}
+
+@mixin parent {
+	$parents: ();
+	$parent: "";
+
+	@each $selector in & {
+		$length: length($selector);
+		$index: 0;
+		$last-selector: nth($selector, $length);
+
+		@if ($length == 1) {
+			@error "Used parent mixin on a top-level selector";
+		} @else {
+			$index: str-index($last-selector, "::");
+
+			@if ($index) {
+				$last-selector: str-slice($last-selector, 1, $index - 1);
+			} @else {
+				$last-selector: null;
+			}
+			// Inspect allows us to combine two selectors in one block.
+			$parent: inspect(set-nth($selector, $length, #{$last-selector}));
+			$parents: join($parents, $parent, comma);
+		}
+	}
+	@at-root #{$parents} {
+		@content;
+	}
+}
+
+@mixin push($margin-y, $margin-x) {
+	margin: $margin-y $margin-x;
+}
+
+@mixin textGradient($col) {
+	background: linear-gradient(
+		90deg,
+		$col 0%,
+		rgba(0, 89, 151, 1) 35%,
+		rgba(0, 212, 255, 1) 100%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }

@@ -28,3 +28,19 @@
 @function font($path, $base: $base-url) {
 	@return asset($base, "fonts/", $path);
 }
+
+@function get-theme($key) {
+	@return map-get($map: $theme, $key: $key);
+}
+
+@function get-font-size($key) {
+	@return map-get($map: $text-sizes, $key: $key);
+}
+
+@function get-font-weight($key) {
+	@return map-get($map: $font-weights, $key: $key);
+}
+
+@function calcVH() {
+	@return calc(100vh - 80px);
+}

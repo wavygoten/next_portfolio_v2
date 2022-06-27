@@ -1,4 +1,8 @@
 header {
+	// box-shadow: -1px 4px 9px -5px rgba(18, 18, 18, 0.6);
+	position: sticky;
+	top: 0;
+	z-index: map-get($map: $z-indexes, $key: default);
 	.nav {
 		height: 80px;
 		width: 100%;
@@ -6,6 +10,7 @@ header {
 		flex-flow: row wrap;
 		align-items: center;
 		justify-content: space-between;
+		font-weight: get-font-weight("regular");
 	}
 
 	.theme-icon {
@@ -17,6 +22,7 @@ header {
 		align-items: center;
 		text-align: center;
 		border-bottom: 1px solid transparent;
+		font-size: get-font-size("md");
 
 		.nav-items__item {
 			padding: 16px 64px;
@@ -32,29 +38,14 @@ header {
 
 	.nav-mobile {
 		display: none;
-		.nav-mobile-menu {
-			position: absolute;
-			display: flex;
-			flex-flow: column nowrap;
-			justify-content: center;
-			align-items: center;
-			width: 100%;
-			padding: 2rem 0;
-			top: 80px;
-			left: 0;
-			z-index: -10;
-			// transition: 200ms linear;
-			li {
-				padding: 1rem;
-				cursor: pointer;
-				&:hover {
-					color: map-get($map: $theme, $key: "borderLight");
-				}
-			}
-		}
-		#menu-collapsed {
-			top: -186px;
-		}
+	}
+
+	.nav-underline {
+		position: fixed;
+		top: 80px;
+		left: 0;
+		width: 100%;
+		height: 1px;
 	}
 
 	@include respond-to("medium") {
@@ -64,9 +55,36 @@ header {
 		.nav-mobile {
 			display: flex;
 			flex-flow: column nowrap;
+
+			.nav-mobile-menu {
+				position: absolute;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				padding: 1rem 0;
+				top: 80px;
+				left: 0;
+				box-shadow: -1px 4px 9px -5px rgba(18, 18, 18, 0.6);
+				font-size: get-font-size("sm");
+				li {
+					padding: 1.5rem;
+					cursor: pointer;
+					&:hover {
+						color: map-get($map: $theme, $key: "borderLight");
+					}
+				}
+			}
+			#menu-collapsed {
+				top: -50vh;
+				box-shadow: none;
+			}
 		}
 		.theme-icon {
 			margin: 0;
+			position: relative;
+			z-index: 10;
 		}
 	}
 }

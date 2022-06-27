@@ -1,31 +1,112 @@
 .theme[data-theme="dark"] {
-	background-color: map-get($theme, "bgDark");
-	color: map-get($theme, "textDark");
-	border-color: map-get($theme, "borderDark");
-
+	background-color: get-theme("bgDark");
+	color: get-theme("textDark");
+	border-color: get-theme("borderDark");
+	header {
+		background-color: get-theme("bgDark");
+		border-bottom: 1px solid $hover-light;
+	}
 	.nav-burger__item {
-		background-color: map-get($map: $theme, $key: "light");
+		background-color: get-theme("light");
 	}
 	.nav-mobile-menu {
-		background-color: map-get($map: $theme, $key: "bgDark");
-		color: map-get($map: $theme, $key: "textDark");
+		background-color: get-theme("bgDark");
 
 		// border-bottom: 3px solid map-get($map: $theme, $key: "borderDark");
 	}
-}
-.theme[data-theme="light"] {
-	background-color: map-get($theme, "bgLight");
-	color: map-get($theme, "textLight");
-	border-color: map-get($theme, "borderLight");
-	transition: 0.2s ease-in-out;
+	// .nav-underline {
+	// 	background-color: $hover-light;
+	// }
+	.Tooltip {
+		background: get-theme("secondaryLight");
+		color: get-theme("textLight");
+		pointer-events: none;
+		border-radius: 6px;
+		padding: 4px 6px;
+		font-size: 14px;
+		transition-duration: none;
+	}
 
+	.text-gradient {
+		@include textGradient(#fff);
+	}
+
+	.projects__project {
+		&:hover {
+			background-color: $hover-dark;
+		}
+	}
+	input,
+	textarea {
+		background-color: $hover-dark;
+		color: get-theme("textDark");
+		border: 1px solid $dark-grey;
+		&:focus {
+			border: 1px solid $light-grey;
+		}
+	}
+	button {
+		background-color: $hover-dark;
+		color: get-theme("textDark");
+		border: 1px solid $dark-grey;
+		&:hover {
+			background-color: $dark-grey;
+		}
+	}
+}
+
+.theme[data-theme="light"] {
+	background-color: get-theme("bgLight");
+	color: get-theme("textLight");
+	border-color: get-theme("borderLight");
+
+	header {
+		background-color: get-theme("bgLight");
+		border-bottom: 1px solid $hover-dark;
+	}
 	.nav-burger__item {
-		background-color: map-get($map: $theme, $key: "dark");
+		background-color: get-theme("dark");
 	}
 	.nav-mobile-menu {
-		background-color: map-get($map: $theme, $key: "bgLight");
-		color: map-get($map: $theme, $key: "textLight");
+		background-color: get-theme("bgLight");
 
 		// border-bottom: 3px solid map-get($map: $theme, $key: "borderLight");
+	}
+
+	.Tooltip {
+		background: get-theme("secondaryDark");
+		color: get-theme("textDark");
+		pointer-events: none;
+		border-radius: 6px;
+		padding: 6px 12px;
+		font-size: 14px;
+		transition-duration: none;
+	}
+
+	.text-gradient {
+		@include textGradient(#000);
+	}
+
+	.projects__project {
+		&:hover {
+			background-color: $light-grey;
+		}
+	}
+	input,
+	textarea {
+		background-color: get-theme("light");
+		color: get-theme("textLight");
+		border: 1px solid $light-grey;
+		&:focus {
+			border: 1px solid $mid-grey;
+		}
+	}
+	button {
+		background-color: get-theme("light");
+		color: get-theme("textLight");
+		border: 1px solid $mid-grey;
+		&:hover {
+			background-color: $light-grey;
+		}
 	}
 }

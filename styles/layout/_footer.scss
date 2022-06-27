@@ -1,0 +1,29 @@
+footer {
+	.footer-wrapper {
+		@extend .v-stack-center;
+		padding-bottom: 3rem;
+	}
+
+	.footer-list {
+		@extend .stack-center;
+		@include push(2rem, 0);
+	}
+
+	.footer-list__item {
+		svg {
+			@include push(0, 1rem);
+			opacity: 0.8;
+			&:hover {
+				opacity: 1;
+			}
+		}
+		.footer-email {
+			font-size: get-font-size("md");
+			font-weight: get-font-weight("regular");
+		}
+		.footer-title {
+			font-size: get-font-size("md");
+			font-weight: get-font-weight("regular");
+		}
+	}
+}

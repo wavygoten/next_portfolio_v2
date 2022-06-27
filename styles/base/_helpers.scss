@@ -18,12 +18,18 @@
    * 3. Leave some space on the edges, especially valuable on small screens
    */
 .container {
-	max-width: $max-width; /* 1 */
-	margin-left: auto; /* 2 */
-	margin-right: auto; /* 2 */
-	padding-left: 20px; /* 3 */
-	padding-right: 20px; /* 3 */
-	width: 100%; /* 1 */
+	@include respond-below("small") {
+		@include make-container(32px);
+	}
+	@include respond-above("small") {
+		@include make-container(48px);
+	}
+	@include respond-above("medium") {
+		@include make-container(64px);
+	}
+	@include respond-above("large") {
+		@include make-container(80px);
+	}
 }
 
 /**
@@ -62,3 +68,27 @@
 	display: flex;
 	justify-content: center;
 }
+
+.stack {
+	display: flex;
+}
+.stack-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.v-stack {
+	display: flex;
+	flex-flow: column nowrap;
+}
+.v-stack-center {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+// .text-gradient {
+// 	transition: 200ms ease-in-out;
+// }
