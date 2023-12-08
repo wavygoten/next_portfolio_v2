@@ -3,3 +3,4 @@ export { default as SunIcon } from "./SunIcon";
 export { default as MediumIcon } from "./MediumIcon";
 export { default as GithubIcon } from "./GithubIcon";
 export { default as DevtoIcon } from "./DevtoIcon";
+export { default as LinkedInIcon } from "./LinkedInIcon";

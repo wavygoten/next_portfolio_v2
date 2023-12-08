@@ -1,6 +1,7 @@
 import * as trpc from "@trpc/server";
 import { z } from "zod";
 import nodemailer from "nodemailer";
+const access_key: string = `${process.env.WEB3_ACCESS_KEY}`;
 export const contact = trpc.router().mutation("contact", {
 	input: z.object({
 		name: z.string(),
@@ -12,28 +13,37 @@ export const contact = trpc.router().mutation("contact", {
 		const { name, email, message } = input;
 		try {
 			if (name.length && message.length) {
-				// const nodemailer = require("nodemailer");
-				const transporter = nodemailer.createTransport({
-					host: "mail.privateemail.com",
-					auth: {
-						user: `${process.env.EMAIL_ADDRESS}`,
-						pass: `${process.env.EMAIL_PASSWORD}`,
+				const body: object = {
+					name,
+					email,
+					message,
+					access_key,
+					subject: "Message From Portfolio Site",
+				};
+				const resp = await fetch("https://api.web3forms.com/submit", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+						Accept: "application/json",
 					},
-					port: 465,
+					body: JSON.stringify(body),
 				});
-				const mailOptions = {
-					from: `${process.env.EMAIL_ADDRESS}`,
-					to: `${process.env.EMAIL_ADDRESS}`,
-					subject: "Portfolio Web Message",
-					text: `Name:${name} \n\n Email:${email} \n\n Message: ${message}`,
-				};
-				await transporter.sendMail(mailOptions);
-				return {
-					success: true,
-					message: "Successfully sent message",
-				};
+				const result = await resp.json();
+				if (result.success) {
+					return {
+						success: true,
+						message: "Successfully sent message",
+					};
+				} else {
+					console.log(result);
+					throw new Error(
+						"Some error occurred when sending... please contact me on any of my networks below"
+					);
+				}
 			} else {
-				throw new Error("Name or message is empty");
+				throw new Error(
+					"Message and name is not specified, please fill out and try again "
+				);
 			}
 		} catch (error: unknown) {
 			const { message } = error as Error;

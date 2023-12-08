@@ -10,6 +10,7 @@ import {
 } from "../components";
 import { useScrollTo } from "../hooks";
 import { trpc } from "../utils/trpc";
+
 type Props = {};
 
 const Main: FC<Props> = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { MediumIcon, GithubIcon, DevtoIcon } from "../Svg";
+import { MediumIcon, GithubIcon, LinkedInIcon } from "../Svg";
 type Props = { isDark: boolean };
 
 const Footer = ({ isDark }: Props) => {
@@ -26,12 +26,12 @@ const Footer = ({ isDark }: Props) => {
 						</li>
 					</a>
 					<a
-						href="https://dev.to/ihsaan"
+						href="https://www.linkedin.com/in/ihsaanb"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						<li className="footer-list__item">
-							<DevtoIcon isDark={isDark} />
+							<LinkedInIcon isDark={isDark} />
 						</li>
 					</a>
 				</ul>

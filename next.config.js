@@ -5,6 +5,9 @@ const nextConfig = {
 	sassOptions: {
 		includePaths: [path.join(__dirname, "styles")],
 	},
+	env: {
+		WEB3_ACCESS_KEY: process.env.WEB3_ACCESS_KEY,
+	},
 };
 
 module.exports = nextConfig;
