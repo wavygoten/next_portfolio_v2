@@ -105,6 +105,7 @@
 		background-color: get-theme("light");
 		color: get-theme("textLight");
 		border: 1px solid $mid-grey;
+		border-radius: 8px;
 		&:hover {
 			background-color: $light-grey;
 		}

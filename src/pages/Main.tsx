@@ -10,7 +10,7 @@ import {
 } from "../components";
 import { useScrollTo } from "../hooks";
 import { trpc } from "../utils/trpc";
-
+import dynamic from "next/dynamic";
 type Props = {};
 
 const Main: FC<Props> = () => {
@@ -67,7 +67,10 @@ const Main: FC<Props> = () => {
 		<Fragment>
 			<div className="theme" data-theme={state.isDark ? "dark" : "light"}>
 				<Header handleScrollClick={handleScrollClick} />
-				<Content contentRef={ContentRef} />
+				<Content
+					contentRef={ContentRef}
+					handleScrollClick={handleScrollClick}
+				/>
 				<Projects projectsRef={ProjectsRef} />
 				<Contact
 					contactRef={ContactRef}
@@ -83,4 +86,6 @@ const Main: FC<Props> = () => {
 	);
 };
 
-export default Main;
+// export default Main;
+
+export default dynamic(() => Promise.resolve(Main), { ssr: false });

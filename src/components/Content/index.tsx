@@ -6,9 +6,10 @@ import { FadeIn } from "../Animations";
 import Spotify from "./Spotify";
 type Props = {
 	contentRef: React.MutableRefObject<HTMLDivElement | null>;
+	handleScrollClick: (link: string) => void;
 };
 
-const Content = ({ contentRef }: Props) => {
+const Content = ({ contentRef, handleScrollClick }: Props) => {
 	return (
 		<section className="content container" ref={contentRef}>
 			<FadeIn className="profile">
@@ -17,22 +18,38 @@ const Content = ({ contentRef }: Props) => {
 						<div className="details__subtitle">
 							Hey! Welcome to my Portfolio
 						</div>
-						<div className="details__title">
-							You can call me Ihsaan
-							{/* <div className="text-gradient" style={{ marginLeft: 6 }}>
-									Ihsaan
-								</div>{" "} */}
-						</div>
+						<div className="details__title">You can call me Ihsaan</div>
 						<p className="details__description">
-							I{"'"}m a software developer living in Chicago, US.
+							I{"'"}m an aspiring software engineer living in Chicago, IL.
 						</p>
 
 						<p className="details__description">
-							I focus on building frontend and backend applications with React
-							and Typescript.
+							I am currently studying computer science and have a passion for
+							building and creating anything tech related.
 						</p>
+						<p className="details__description">Feel free to look around.</p>
+						<div
+							style={{
+								display: "flex",
+								flexFlow: "row wrap",
+								justifyContent: "center",
+								alignItems: "center",
+							}}
+							className="details__description"
+						>
+							<p className="details__desc__sub">
+								If you would like to react me, send me a message
+							</p>
+							<button
+								className="details__button"
+								onClick={() => handleScrollClick("contact")}
+							>
+								Contact
+							</button>
+						</div>
+
 						<div className="push-down"></div>
-						<ul className="details__tooltips">
+						{/* <ul className="details__tooltips">
 							<Tippy label="NextJS">
 								<li className="details__tooltip">
 									<Image
@@ -123,7 +140,7 @@ const Content = ({ contentRef }: Props) => {
 									/>
 								</li>
 							</Tippy>{" "}
-						</ul>
+						</ul> */}
 						{/* <div className="details__spotify">
 							<Spotify />
 						</div> */}

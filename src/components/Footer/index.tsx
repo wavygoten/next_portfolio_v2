@@ -37,12 +37,12 @@ const Footer = ({ isDark }: Props) => {
 				</ul>
 				<ul className="footer-list">
 					<a
-						href="mailto:ihsaan.b@yahoo.com"
+						href="mailto:ihsaanb@gmail.com"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						<li className="footer-list__item">
-							<div className="footer-email">ihsaan.b@yahoo.com</div>
+							<div className="footer-email">ihsaanb@gmail.com</div>
 						</li>
 					</a>
 				</ul>
