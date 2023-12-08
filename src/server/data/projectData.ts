@@ -3,7 +3,7 @@ export const data = [
 		title: "Trait Surfer App (Web App + Google Extension)",
 		message:
 			"Traitsurfer is an app that calculates and displays NFT rarity ranks. The extension provides easy accessibility to the ranks on NFT platforms such as Opensea, LooksRare, and more.",
-		link: "https://github.com/wavygoten/Rarity-Api/tree/main/src",
+		link: "https://github.com/wavygoten/Rarity-Api/tree/main",
 	},
 	{
 		title: "MERN Session Auth (Login + Register + Reset Password + Dashboard)",
