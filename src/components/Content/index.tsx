@@ -38,7 +38,7 @@ const Content = ({ contentRef, handleScrollClick }: Props) => {
 							className="details__description"
 						>
 							<p className="details__desc__sub">
-								If you would like to react me, send me a message
+								If you would like to reach me, send me a message
 							</p>
 							<button
 								className="details__button"
