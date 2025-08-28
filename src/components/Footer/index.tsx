@@ -7,7 +7,7 @@ const Footer = ({ isDark }: Props) => {
 		<footer className="footer container">
 			<div className="footer-wrapper">
 				<ul className="footer-list">
-					<a
+					{/* <a
 						href="https://ihsaan.medium.com"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -15,7 +15,7 @@ const Footer = ({ isDark }: Props) => {
 						<li className="footer-list__item">
 							<MediumIcon isDark={isDark} />
 						</li>
-					</a>
+					</a> */}
 					<a
 						href="https://github.com/wavygoten"
 						target="_blank"
