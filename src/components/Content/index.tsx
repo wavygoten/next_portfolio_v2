@@ -20,26 +20,21 @@ const Content = ({ contentRef, handleScrollClick }: Props) => {
 						</div>
 						<div className="details__title">You can call me Ihsaan</div>
 						<p className="details__description">
-							I{"'"}m an aspiring software engineer living in Chicago, IL.
+							I{"'"}m an aspiring engineer living in Chicago, IL
 						</p>
 
 						<p className="details__description">
-							I am currently studying computer science and have a passion for
-							building and creating anything tech related.
+							I recently graduated in computer science and have a passion for
+							building and creating anything tech related
 						</p>
-						<p className="details__description">Feel free to look around.</p>
+						{/* <p className="details__description">Feel free to look around.</p> */}
 						<div
 							style={{
 								display: "flex",
-								flexFlow: "row wrap",
-								justifyContent: "center",
-								alignItems: "center",
+								flexFlow: "column wrap",
 							}}
 							className="details__description"
 						>
-							<p className="details__desc__sub">
-								If you would like to reach me, send me a message
-							</p>
 							<button
 								className="details__button"
 								onClick={() => handleScrollClick("contact")}
@@ -48,8 +43,8 @@ const Content = ({ contentRef, handleScrollClick }: Props) => {
 							</button>
 						</div>
 
-						<div className="push-down"></div>
-						{/* <ul className="details__tooltips">
+						{/* <div className="push-down"></div> */}
+						<ul className="details__tooltips">
 							<Tippy label="NextJS">
 								<li className="details__tooltip">
 									<Image
@@ -120,30 +115,10 @@ const Content = ({ contentRef, handleScrollClick }: Props) => {
 									/>
 								</li>
 							</Tippy>{" "}
-							<Tippy label="Emotion CSS">
-								<li className="details__tooltip">
-									<Image
-										src={images.emotion}
-										width={24}
-										height={24}
-										alt="emotion-icon"
-									/>
-								</li>
-							</Tippy>{" "}
-							<Tippy label="Styled Components ">
-								<li className="details__tooltip">
-									<Image
-										src={images.styledcomponents}
-										width={24}
-										height={24}
-										alt="sc-icon"
-									/>
-								</li>
-							</Tippy>{" "}
-						</ul> */}
-						{/* <div className="details__spotify">
+						</ul>
+						<div className="details__spotify">
 							<Spotify />
-						</div> */}
+						</div>
 					</div>
 					{/* <div className="hero-img"></div> */}
 				</div>

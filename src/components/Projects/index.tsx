@@ -38,7 +38,7 @@ const Projects = ({ projectsRef }: Props) => {
 											<div className="project__title">{v.title}</div>
 											<p className="project__subtitle">{v.message}</p>
 										</div>
-
+										{/* 
 										<div className="center-image">
 											<Image
 												src={
@@ -52,7 +52,7 @@ const Projects = ({ projectsRef }: Props) => {
 												height={180}
 												alt="ts-web"
 											/>
-										</div>
+										</div> */}
 									</div>
 								</a>
 							);

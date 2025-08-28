@@ -26,14 +26,15 @@
 		margin-bottom: 1.5rem;
 	}
 	.details__desc__sub {
-		flex: 1 1 auto;
-		margin-bottom: 1rem;
+		margin-right: 2rem;
+		margin-bottom: 2rem;
 	}
 
 	.details__button {
 		padding: 0.5rem;
 		border: none;
 		border-radius: 8px;
+		width: fit-content;
 	}
 
 	.push-down {
@@ -43,7 +44,6 @@
 	.details__tooltips {
 		display: flex;
 		flex-flow: row wrap;
-		@include push(1rem, 0);
 		li {
 			cursor: pointer;
 			margin: 0 1.5rem 1.5rem 0;
