@@ -1,5 +1,5 @@
-import { initialValue } from "../states/default";
 import { Action } from "../actions/actions";
+import { initialValue } from "../states/default";
 
 export const reducer = (
 	state: typeof initialValue,
@@ -24,6 +24,12 @@ export const reducer = (
 				...state,
 				navActive: payload,
 			};
+		case "isJobDescOpen":
+			return {
+				...state,
+				isJobDescOpen: payload,
+			};
+
 		default:
 			throw new Error(`Unknown action type ${type}`);
 	}

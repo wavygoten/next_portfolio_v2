@@ -5,4 +5,5 @@ export const initialValue = {
 	isBurgerOpen: false as boolean,
 	isDark: true as boolean,
 	navActive: "" as string,
+	isJobDescOpen: false as boolean,
 };

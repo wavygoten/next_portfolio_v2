@@ -71,6 +71,7 @@
 
 .stack {
 	display: flex;
+	flex-flow: row wrap;
 }
 .stack-center {
 	display: flex;

@@ -1,10 +1,17 @@
-import React, { FC, Fragment, useContext, useRef, useEffect } from "react";
+import React, {
+	FC,
+	Fragment,
+	useContext,
+	useRef,
+	useEffect,
+	ButtonHTMLAttributes,
+} from "react";
 import { AppContext } from "../store/context";
 import {
 	Header,
 	Content,
 	Projects,
-	Library,
+	Experience,
 	Contact,
 	Footer,
 } from "../components";
@@ -19,9 +26,11 @@ const Main: FC<Props> = () => {
 	const ContentRef = useRef<null | HTMLDivElement>(null);
 	const ProjectsRef = useRef<null | HTMLDivElement>(null);
 	const ContactRef = useRef<null | HTMLDivElement>(null);
+	const ExperienceRef = useRef<null | HTMLDivElement>(null);
 	const [setShouldScrollContent] = useScrollTo(ContentRef);
 	const [setShouldScrollProject] = useScrollTo(ProjectsRef);
 	const [setShouldScrollContact] = useScrollTo(ContactRef);
+	const [setShouldScrollExperience] = useScrollTo(ExperienceRef);
 
 	const handleScrollClick = (link: string) => {
 		if (link === "profile") {
@@ -32,6 +41,9 @@ const Main: FC<Props> = () => {
 		}
 		if (link === "contact") {
 			return setShouldScrollContact(true);
+		}
+		if (link == "experience") {
+			return setShouldScrollExperience(true);
 		}
 	};
 
@@ -47,6 +59,11 @@ const Main: FC<Props> = () => {
 		} else {
 			console.log(mutationContact.data?.success);
 		}
+	};
+
+	const handleJobDescClick = (e: React.MouseEvent<HTMLButtonElement>): void => {
+		e.preventDefault();
+		dispatch({ type: "isJobDescOpen", payload: !state.isJobDescOpen });
 	};
 
 	const handleInputChange = (
@@ -70,6 +87,10 @@ const Main: FC<Props> = () => {
 				<Content
 					contentRef={ContentRef}
 					handleScrollClick={handleScrollClick}
+				/>
+				<Experience
+					experienceRef={ExperienceRef}
+					// handleJobDescClick={handleJobDescClick}
 				/>
 				<Projects projectsRef={ProjectsRef} />
 				<Contact

@@ -1,6 +1,5 @@
 import * as trpc from "@trpc/server";
 import { z } from "zod";
-import nodemailer from "nodemailer";
 const access_key: string = `${process.env.WEB3_ACCESS_KEY}`;
 export const contact = trpc.router().mutation("contact", {
 	input: z.object({

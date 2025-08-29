@@ -36,6 +36,11 @@
 			background-color: $hover-dark;
 		}
 	}
+	.experiences__experience {
+		&:hover {
+			background-color: $hover-dark;
+		}
+	}
 	input,
 	textarea {
 		background-color: $hover-dark;
@@ -88,6 +93,11 @@
 	}
 
 	.projects__project {
+		&:hover {
+			background-color: $light-grey;
+		}
+	}
+	.experiences__experience {
 		&:hover {
 			background-color: $light-grey;
 		}

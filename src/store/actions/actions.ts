@@ -4,4 +4,5 @@ export type Action =
 	| { type: "message"; payload: string }
 	| { type: "isBurgerOpen"; payload: boolean }
 	| { type: "isDark"; payload: boolean }
-	| { type: "navActive"; payload: string };
+	| { type: "navActive"; payload: string }
+	| { type: "isJobDescOpen"; payload: boolean };

@@ -1,9 +1,12 @@
 import * as trpc from "@trpc/server";
 import * as trpcNext from "@trpc/server/adapters/next";
-import { hello, contact } from "../../../src/server/routes";
+import { contact, experience, hello } from "../../../src/server/routes";
 
-export const appRouter = trpc.router().merge(hello).merge(contact);
-// .merge(projects);
+export const appRouter = trpc
+	.router()
+	.merge(hello)
+	.merge(contact)
+	.merge(experience);
 
 // export type definition of API
 export type AppRouter = typeof appRouter;

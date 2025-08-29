@@ -1,0 +1,138 @@
+.experience {
+	.experience-wrapper {
+		padding-top: 1rem;
+	}
+	.experience__title {
+		font-size: get-font-size("xl");
+		font-weight: get-font-weight("bold");
+		margin-bottom: 3rem;
+	}
+	// .v-line {
+	// 	height: 100%;
+	// 	position: absolute;
+	// 	left: 50%;
+	// 	width: 1px;
+	// 	background-color: $dark-grey;
+	// }
+
+	.experiences__experience {
+		border: 1px solid $dark-grey;
+		border-radius: 8px;
+		padding: 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 2rem;
+
+		&:hover {
+			cursor: pointer;
+		}
+		.experience_title {
+			font-size: get-font-size("md");
+			font-weight: get-font-weight("bold");
+			margin-bottom: 0.25rem;
+		}
+		.experience__subtitle {
+			font-size: get-font-size("sm");
+			font-weight: get-font-weight("regular");
+		}
+		.experience__description:first-child {
+			font-size: get-font-size("sm");
+			font-weight: get-font-weight("regular");
+		}
+		.experience__descriptions {
+			margin: 1rem 0;
+		}
+		.experience__description {
+			font-size: get-font-size("sm");
+			font-weight: get-font-weight("regular");
+			margin-bottom: 0.5rem;
+			list-style-type: disc;
+			list-style-position: inside;
+		}
+		.experience_skill {
+			font-size: get-font-size("md");
+			margin-right: 1rem;
+			margin-bottom: 0.25rem;
+		}
+
+		.show__jobs_btn {
+			padding: 0.5rem;
+			padding: 0.5rem 1rem;
+			border-radius: 8px;
+			cursor: pointer;
+			&:hover {
+			}
+		}
+
+		// .center-image {
+		// 	margin-left: 2rem;
+		// 	border-radius: 5px;
+		// 	overflow: hidden;
+		// }
+	}
+	.experience__repos {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-column-gap: 1rem;
+		grid-row-gap: 1rem;
+	}
+	.experience__repo {
+		display: flex;
+		flex-flow: column nowrap;
+		border: 1px solid $dark-grey;
+		border-radius: 8px;
+		padding: 1rem 2rem;
+		.repo__title {
+			display: flex;
+			font-size: get-font-size("md");
+			font-weight: get-font-weight("regular");
+			margin-bottom: 1.5rem;
+			div {
+				margin-right: 1rem;
+			}
+		}
+		.repo__description {
+			font-size: get-font-size("sm");
+			font-weight: get-font-weight("regular");
+			margin-bottom: 2rem;
+		}
+		.repo__details {
+			display: flex;
+			font-size: get-font-size("sm");
+			font-weight: get-font-weight("regular");
+			div {
+				margin-right: 1rem;
+			}
+		}
+	}
+
+	@include respond-to("medium") {
+		.experience__repos {
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-rows: repeat(6, 1fr);
+		}
+
+		.experience-wrapper {
+			margin-bottom: 4rem;
+		}
+		.experiences__experience {
+			flex-flow: column nowrap;
+			justify-content: center;
+			.push-right {
+				display: none;
+			}
+			.stack {
+				@include v-stack();
+			}
+		}
+
+		.experience__title {
+			text-align: center;
+		}
+		.experience__subtitle {
+			margin-bottom: 0.25rem;
+		}
+	}
+}

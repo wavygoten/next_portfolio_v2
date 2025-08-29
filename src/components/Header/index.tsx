@@ -20,6 +20,12 @@ const Header = ({ handleScrollClick }: Props) => {
 					</li>
 					<li
 						className="nav-items__item"
+						onClick={() => handleScrollClick("experience")}
+					>
+						Experience
+					</li>
+					<li
+						className="nav-items__item"
 						onClick={() => handleScrollClick("projects")}
 					>
 						Projects
@@ -61,6 +67,15 @@ const Header = ({ handleScrollClick }: Props) => {
 						<li
 							className="nav-mobile-menu__item"
 							onClick={() => {
+								handleScrollClick("experience");
+								dispatch({ type: "isBurgerOpen", payload: state.isBurgerOpen });
+							}}
+						>
+							Experience
+						</li>
+						<li
+							className="nav-mobile-menu__item"
+							onClick={() => {
 								handleScrollClick("projects");
 								dispatch({ type: "isBurgerOpen", payload: state.isBurgerOpen });
 							}}
@@ -76,6 +91,7 @@ const Header = ({ handleScrollClick }: Props) => {
 						>
 							Contact
 						</li>
+
 						{/* <li className="nav-mobile-menu__item">About</li> */}
 					</ul>
 				</div>
