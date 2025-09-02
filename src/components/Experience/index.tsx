@@ -37,7 +37,7 @@ const Experience = ({ experienceRef }: Props) => {
 							return (
 								<div key={i}>
 									<div className="experiences__experience">
-										<div className="v-stack">
+										<div className="v-stack experience-container">
 											<div className="v-stack">
 												<div className="stack">
 													<div className="experience_title">{v.title}</div>
