@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext, Children } from "react";
 import { FadeIn } from "../Animations";
 import { AppContext } from "../../store/context";
-import { Knowles, UIC } from "../Svg";
+import { Knowles, Latan, UIC } from "../Svg";
 type Props = {
 	experienceRef: React.MutableRefObject<HTMLDivElement | null>;
 	// handleJobDescClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
@@ -38,7 +38,7 @@ const Experience = ({ experienceRef }: Props) => {
 							return (
 								<div key={i}>
 									<div className="experiences__experience">
-										{i == 0 ? <Knowles /> : i == 1 ? <UIC /> : <></>}
+										{i == 0 ? <Knowles /> : i == 1 ? <UIC /> : <Latan />}
 										<div className="v-stack experience-container">
 											<div className="v-stack">
 												<div className="stack">
