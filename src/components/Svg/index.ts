@@ -1,6 +1,8 @@
+export { default as DevtoIcon } from "./DevtoIcon";
+export { default as GithubIcon } from "./GithubIcon";
+export { default as Knowles } from "./Knowles";
+export { default as LinkedInIcon } from "./LinkedInIcon";
+export { default as MediumIcon } from "./MediumIcon";
 export { default as MoonIcon } from "./MoonIcon";
 export { default as SunIcon } from "./SunIcon";
-export { default as MediumIcon } from "./MediumIcon";
-export { default as GithubIcon } from "./GithubIcon";
-export { default as DevtoIcon } from "./DevtoIcon";
-export { default as LinkedInIcon } from "./LinkedInIcon";
+export { default as UIC } from "./UIC";

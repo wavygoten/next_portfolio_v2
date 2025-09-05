@@ -28,6 +28,7 @@
 			font-weight: get-font-weight("bold");
 		}
 		.project__subtitle {
+			margin-top: 1rem;
 			font-size: get-font-size("sm");
 			font-weight: get-font-weight("regular");
 		}
@@ -41,13 +42,11 @@
 		.projects__wrapper {
 			margin-bottom: 4rem;
 		}
-		.projects__project {
-			flex-flow: column nowrap;
-			justify-content: center;
-		}
-		.project__title {
-			text-align: center;
-		}
+		// .projects__project {
+		// 	flex-flow: column nowrap;
+		// 	justify-content: center;
+		// }
+
 		.project__subtitle {
 			display: none;
 		}
