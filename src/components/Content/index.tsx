@@ -44,7 +44,7 @@ const Content = ({ contentRef, handleScrollClick }: Props) => {
 						</div>
 
 						{/* <div className="push-down"></div> */}
-						<ul className="details__tooltips">
+						{/* <ul className="details__tooltips">
 							<Tippy label="NextJS">
 								<li className="details__tooltip">
 									<Image
@@ -115,7 +115,7 @@ const Content = ({ contentRef, handleScrollClick }: Props) => {
 									/>
 								</li>
 							</Tippy>{" "}
-						</ul>
+						</ul> */}
 						<div className="details__spotify">
 							<Spotify />
 						</div>
