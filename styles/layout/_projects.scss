@@ -1,14 +1,14 @@
 .projects {
+	width: 50%;
 	.projects__wrapper {
-		padding-top: 2rem;
-		margin-top: 1rem;
+		padding: 1rem 2rem 0 2rem;
 		margin-bottom: 8rem;
 	}
 
 	.projects__title {
 		font-size: get-font-size("xl");
 		font-weight: get-font-weight("bold");
-		margin-bottom: 4rem;
+		margin-bottom: 3rem;
 	}
 
 	.projects__project {
@@ -54,5 +54,6 @@
 		// 	margin-left: 0 !important;
 		// 	margin-top: 1rem;
 		// }
+		width: 100%;
 	}
 }

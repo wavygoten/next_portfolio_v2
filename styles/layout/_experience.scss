@@ -1,6 +1,10 @@
 .experience {
+	// height: calcVH();
+	width: 50%;
+
 	.experience-wrapper {
 		padding-top: 1rem;
+		margin-bottom: 8rem;
 	}
 	.experience__title {
 		font-size: get-font-size("xl");
@@ -54,7 +58,7 @@
 			list-style-position: inside;
 		}
 		.experience_skill {
-			font-size: get-font-size("md");
+			font-size: get-font-size("xs");
 			margin-right: 1rem;
 			margin-bottom: 0.25rem;
 		}
@@ -105,5 +109,6 @@
 		div > .stack:first-child {
 			margin-bottom: 0.5rem;
 		}
+		width: 100%;
 	}
 }

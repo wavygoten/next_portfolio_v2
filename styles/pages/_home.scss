@@ -10,3 +10,18 @@
 // * {
 // 	border: 1px red solid;
 // }
+
+.about_me {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+@include respond-to("medium") {
+	.about_me {
+		flex-direction: column;
+	}
+}
+
+button {
+	cursor: pointer;
+}

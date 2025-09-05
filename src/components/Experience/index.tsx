@@ -26,7 +26,7 @@ const Experience = ({ experienceRef }: Props) => {
 	}, []);
 
 	return (
-		<section className="experience container" ref={experienceRef}>
+		<section className="experience" ref={experienceRef}>
 			<FadeIn className="experience-wrapper">
 				<div className="stack-center">
 					<div className="experience__title">Experience</div>

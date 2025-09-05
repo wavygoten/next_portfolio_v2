@@ -88,11 +88,14 @@ const Main: FC<Props> = () => {
 					contentRef={ContentRef}
 					handleScrollClick={handleScrollClick}
 				/>
-				<Experience
-					experienceRef={ExperienceRef}
-					// handleJobDescClick={handleJobDescClick}
-				/>
-				<Projects projectsRef={ProjectsRef} />
+				<div className="about_me container">
+					<Experience
+						experienceRef={ExperienceRef}
+						// handleJobDescClick={handleJobDescClick}
+					/>
+					<Projects projectsRef={ProjectsRef} />
+				</div>
+
 				<Contact
 					contactRef={ContactRef}
 					handleSubmit={handleFormSubmit}
