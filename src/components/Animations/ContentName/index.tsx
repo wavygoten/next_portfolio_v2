@@ -1,7 +1,7 @@
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useState } from "react";
 import CursorBlinker from "./CursorBlinker";
-export default function RedoAnimText() {
+export default function AnimText() {
 	const textIndex = useMotionValue(0);
 	const texts = ["Ihsaan..."];
 
