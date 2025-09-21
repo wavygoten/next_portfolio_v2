@@ -98,6 +98,7 @@
 	padding-left: $padding-x;
 	margin-right: auto;
 	margin-left: auto;
+	max-width: 1400px;
 }
 
 @mixin v-stack() {
@@ -161,4 +162,8 @@
 	);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+@mixin animate($str, $duration) {
+	animation: $str $duration ease-in-out;
 }

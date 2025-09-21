@@ -7,8 +7,8 @@ interface Props {
 const Header = ({ handleScrollClick }: Props) => {
 	const { state, dispatch } = useContext(AppContext);
 	return (
-		<header className="navbar container">
-			<nav className="nav">
+		<header className="navbar">
+			<nav className="nav container">
 				<LightDarkIcon />
 				<span className="push-right" />
 				<ul className="nav-items">

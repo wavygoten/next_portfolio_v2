@@ -24,6 +24,10 @@
 
 button {
 	cursor: pointer;
+
+	&:hover {
+		@include animate(buttonScale, 0.5s);
+	}
 }
 
 .content {

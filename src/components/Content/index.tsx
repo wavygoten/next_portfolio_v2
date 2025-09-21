@@ -13,40 +13,37 @@ const Content = ({ contentRef, handleScrollClick }: Props) => {
 	return (
 		<section className="content container" ref={contentRef}>
 			<FadeIn className="profile">
-				<div className="stack-center">
-					<div className="details">
-						<div className="details__subtitle">
-							Hey! Welcome to my Portfolio
-						</div>
-						<div className="details__title">
-							You can call me <AnimText />
-						</div>
-						<p className="details__description">
-							I{"'"}m an aspiring engineer living in Chicago, IL
-						</p>
+				<div className="details">
+					<div className="details__subtitle">Hey! Welcome to my Portfolio</div>
+					<div className="details__title">
+						You can call me <AnimText />
+					</div>
+					<p className="details__description">
+						I{"'"}m an aspiring engineer living in Chicago, IL
+					</p>
 
-						<p className="details__description">
-							I recently graduated in computer science and have a passion for
-							building and creating anything tech related
-						</p>
-						{/* <p className="details__description">Feel free to look around.</p> */}
-						<div
-							style={{
-								display: "flex",
-								flexFlow: "column wrap",
-							}}
-							className="details__description"
+					<p className="details__description">
+						I recently graduated in computer science and have a passion for
+						building and creating anything tech related
+					</p>
+					{/* <p className="details__description">Feel free to look around.</p> */}
+					<div
+						style={{
+							display: "flex",
+							flexFlow: "column wrap",
+						}}
+						className="details__description"
+					>
+						<button
+							className="details__button"
+							onClick={() => handleScrollClick("contact")}
 						>
-							<button
-								className="details__button"
-								onClick={() => handleScrollClick("contact")}
-							>
-								Contact
-							</button>
-						</div>
+							Contact
+						</button>
+					</div>
 
-						{/* <div className="push-down"></div> */}
-						{/* <ul className="details__tooltips">
+					{/* <div className="push-down"></div> */}
+					{/* <ul className="details__tooltips">
 							<Tippy label="NextJS">
 								<li className="details__tooltip">
 									<Image
@@ -118,12 +115,11 @@ const Content = ({ contentRef, handleScrollClick }: Props) => {
 								</li>
 							</Tippy>{" "}
 						</ul> */}
-						<div className="details__spotify">
-							<Spotify />
-						</div>
+					<div className="details__spotify">
+						<Spotify />
 					</div>
-					{/* <div className="hero-img"></div> */}
 				</div>
+				{/* <div className="hero-img"></div> */}
 			</FadeIn>
 		</section>
 	);

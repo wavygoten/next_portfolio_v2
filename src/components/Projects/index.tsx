@@ -18,7 +18,7 @@ const Projects = ({ projectsRef }: Props) => {
 	}, []);
 
 	return (
-		<section className="projects" ref={projectsRef}>
+		<section className="projects container" ref={projectsRef}>
 			<FadeIn className="projects__wrapper">
 				<div className="stack-center">
 					<div className="projects__title">Projects</div>

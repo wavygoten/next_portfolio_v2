@@ -5,7 +5,6 @@ header {
 	z-index: map-get($map: $z-indexes, $key: default);
 	.nav {
 		height: 80px;
-		width: 100%;
 		display: flex;
 		flex-flow: row wrap;
 		align-items: center;
