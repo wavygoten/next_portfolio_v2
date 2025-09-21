@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import CursorBlinker from "./CursorBlinker";
 export default function AnimText() {
 	const textIndex = useMotionValue(0);
-	const texts = ["Ihsaan..."];
+	const texts = ["Ihsaan"];
 
 	const baseText = useTransform(textIndex, (latest) => texts[latest] || "");
 	const count = useMotionValue(0);
