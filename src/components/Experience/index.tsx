@@ -1,10 +1,8 @@
 import { useState, useEffect, useContext, Children } from "react";
 import { FadeIn } from "../Animations";
-import { AppContext } from "../../store/context";
 import { Knowles, Latan, UIC } from "../Svg";
 type Props = {
 	experienceRef: React.MutableRefObject<HTMLDivElement | null>;
-	// handleJobDescClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 const Experience = ({ experienceRef }: Props) => {
@@ -13,7 +11,6 @@ const Experience = ({ experienceRef }: Props) => {
 		fetch("/api/experience")
 			.then((res) => res.json())
 			.then((data) => {
-				// console.log(data);
 				setData(data.data);
 			});
 	}, []);
@@ -52,29 +49,6 @@ const Experience = ({ experienceRef }: Props) => {
 												</div>
 											</div>
 											<span className="break"></span>
-
-											{/* <div className="v-stack experience__descriptions">
-												{openJobIndex === i ? (
-													<>
-														{v.messages.map((element: string, j: number) => (
-															<li
-																key={`${i}-${j}`}
-																className="experience__description"
-															>
-																{element}
-															</li>
-														))}
-													</>
-												) : (
-													<button
-														onClick={() => handleJobDescClick(i)}
-														className="show__jobs_btn"
-													>
-														Show more
-													</button>
-												)}
-											</div> */}
-
 											<ul className="stack">
 												{v.skills.map((element: string, k: number) => {
 													return (
