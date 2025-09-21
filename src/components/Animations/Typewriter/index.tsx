@@ -3,14 +3,17 @@ import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 import CursorBlinker from "./CursorBlinker";
-export default function AnimText() {
+type Props = {
+	name: string;
+};
+export default function TypewriterAnimation({ name }: Props) {
 	// const textIndex = useMotionValue(0);
 	// const texts = ["Ihsaan"];
 	const [ref, inView] = useInView();
 
 	// const baseText = useTransform(textIndex, (latest) => texts[latest] || "");
 
-	const baseText = "Ihsaan" as string;
+	const baseText = name as string;
 	const count = useMotionValue(0);
 	// const rounded = useTransform(count, (latest) => Math.round(latest));
 	// const displayText = useTransform(rounded, (latest) =>
@@ -49,7 +52,7 @@ export default function AnimText() {
 			controls.stop();
 			count.set(0);
 		};
-	}, [count, inView]);
+	}, [count, inView, baseText.length]);
 
 	// Subscribe to the MotionValue and update React state on every change
 	// useEffect(() => {

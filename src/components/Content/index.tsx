@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { images } from "../../utils/images";
 import Tippy from "../Utils/Tippy";
-import { FadeIn, AnimText } from "../Animations";
+import { FadeIn, TypeWriterAnimation } from "../Animations";
 import Spotify from "./Spotify";
 type Props = {
 	contentRef: React.MutableRefObject<HTMLDivElement | null>;
@@ -16,7 +16,7 @@ const Content = ({ contentRef, handleScrollClick }: Props) => {
 				<div className="details">
 					<div className="details__subtitle">Hey! Welcome to my Portfolio</div>
 					<div className="details__title">
-						You can call me <AnimText />
+						You can call me <TypeWriterAnimation name="Ihsaan" />
 					</div>
 					<p className="details__description">
 						I{"'"}m an aspiring engineer living in Chicago, IL
