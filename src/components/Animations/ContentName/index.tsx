@@ -90,10 +90,10 @@ export default function AnimText() {
 
 	return (
 		<>
-			<motion.span ref={ref} className="inline name">
+			<motion.span ref={ref} className="name">
 				{text}
+				<CursorBlinker />
 			</motion.span>
-			<CursorBlinker />
 		</>
 	);
 }

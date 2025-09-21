@@ -8,7 +8,7 @@ export const data = [
 	{
 		title: "Vaccine Radar/Finder",
 		message:
-			"A project I made to find the nearest in stock COVID-19 vaccine. All you have to do is enter your zip code and it will pull up the nearest pharmacies and their info based on approximity.",
+			"A project to find the nearest in stock COVID-19 vaccine. All you have to do is enter your zip code and it will pull up the nearest pharmacies and their info based on approximity.",
 		link: "https://github.com/wavygoten/vaccine-finder",
 	},
 	// {

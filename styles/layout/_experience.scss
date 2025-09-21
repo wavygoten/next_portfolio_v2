@@ -83,11 +83,11 @@
 			.stack {
 				@include v-stack();
 			}
-			// svg {
-			// 	margin-right: 2rem;
-			// 	width: 48px;
-			// 	height: auto;
-			// }
+			padding: 1rem;
+
+			svg {
+				margin-right: 1rem;
+			}
 		}
 
 		.experience__title {

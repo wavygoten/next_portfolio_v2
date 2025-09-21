@@ -81,6 +81,11 @@
 			font-weight: get-font-weight("regular");
 			font-size: get-font-size("md");
 		}
+
+		.details__title {
+			display: flex;
+			flex-flow: column nowrap;
+		}
 		.profile {
 			padding: 4rem 0;
 		}

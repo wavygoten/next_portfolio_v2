@@ -1,5 +1,5 @@
 import React from "react";
-import { MediumIcon, GithubIcon, LinkedInIcon } from "../Svg";
+import { Mail, GithubIcon, LinkedInIcon } from "../Svg";
 type Props = { isDark: boolean };
 
 const Footer = ({ isDark }: Props) => {
@@ -7,15 +7,15 @@ const Footer = ({ isDark }: Props) => {
 		<footer className="footer container">
 			<div className="footer-wrapper">
 				<ul className="footer-list">
-					{/* <a
-						href="https://ihsaan.medium.com"
+					<a
+						href="mailto:ihsaanb@gmail.com"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						<li className="footer-list__item">
-							<MediumIcon isDark={isDark} />
+							<Mail isDark={isDark} />
 						</li>
-					</a> */}
+					</a>
 					<a
 						href="https://github.com/wavygoten"
 						target="_blank"
@@ -35,7 +35,7 @@ const Footer = ({ isDark }: Props) => {
 						</li>
 					</a>
 				</ul>
-				<ul className="footer-list">
+				{/* <ul className="footer-list">
 					<a
 						href="mailto:ihsaanb@gmail.com"
 						target="_blank"
@@ -45,7 +45,7 @@ const Footer = ({ isDark }: Props) => {
 							<div className="footer-email">ihsaanb@gmail.com</div>
 						</li>
 					</a>
-				</ul>
+				</ul> */}
 				<ul className="footer-list">
 					<li className="footer-list__item">
 						<div className="footer-title">
