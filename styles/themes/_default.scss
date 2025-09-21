@@ -58,8 +58,14 @@
 			background-color: $dark-grey;
 		}
 	}
-	.blinking-cursor {
-		// background-color: rgb(54, 142, 201);
+	.skeleton-content {
+		background-image: linear-gradient(
+			90deg,
+			#1b1b1b 0%,
+			#0e0e0e 40%,
+			#121212 60%,
+			#1b1b1b 100%
+		);
 	}
 }
 
@@ -124,8 +130,13 @@
 		}
 	}
 
-	.blinking-cursor {
-		// background-color: get-theme("bgDark");
-		// background-color: rgb(54, 142, 201);
+	.skeleton-content {
+		background-image: linear-gradient(
+			90deg,
+			#e4e4e4 0%,
+			#f1f1f1 40%,
+			#ededed 60%,
+			#e4e4e4 100%
+		);
 	}
 }

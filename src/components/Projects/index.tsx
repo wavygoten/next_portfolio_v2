@@ -89,13 +89,23 @@ const Projects = ({ projectsRef }: Props) => {
 																	src={images.postgresql}
 																	width={24}
 																	height={24}
-																	alt="css3-icon"
+																	alt="postgresql-icon"
+																/>
+															</li>
+														</Tippy>
+														<Tippy label="TailwindCSS">
+															<li className="details__tooltip">
+																<Image
+																	src={images.tailwind}
+																	width={24}
+																	height={24}
+																	alt="tailwind-icon"
 																/>
 															</li>
 														</Tippy>
 													</ul>
 												</>
-											) : (
+											) : i == 1 ? (
 												<>
 													<ul className="details__tooltips stack">
 														<Tippy label="ReactJS">
@@ -141,6 +151,89 @@ const Projects = ({ projectsRef }: Props) => {
 														</Tippy>
 													</ul>
 												</>
+											) : i == 3 ? (
+												<ul className="details__tooltips stack">
+													<Tippy label="Typescript">
+														<li className="details__tooltip">
+															<Image
+																src={images.typescript}
+																width={24}
+																height={24}
+																alt="typescript-icon"
+															/>
+														</li>
+													</Tippy>
+													<Tippy label="Ethers">
+														<li className="details__tooltip">
+															<Image
+																src={images.ethers}
+																width={24}
+																height={24}
+																alt="ethers-icon"
+															/>
+														</li>
+													</Tippy>
+												</ul>
+											) : i == 2 ? (
+												<ul className="details__tooltips stack">
+													<Tippy label="ReactJS">
+														<li className="details__tooltip">
+															<Image
+																src={images.reactjs}
+																width={24}
+																height={24}
+																alt="reactjs-icon"
+															/>
+														</li>
+													</Tippy>
+													<Tippy label="Javascript">
+														<li className="details__tooltip">
+															<Image
+																src={images.javascript}
+																width={24}
+																height={24}
+																alt="javascript-icon"
+															/>
+														</li>
+													</Tippy>
+													<Tippy label="MongoDB">
+														<li className="details__tooltip">
+															<Image
+																src={images.mongodb}
+																width={24}
+																height={24}
+																alt="mongodb-icon"
+															/>
+														</li>
+													</Tippy>
+												</ul>
+											) : i == 4 ? (
+												<>
+													<ul className="details__tooltips stack">
+														<Tippy label="Java">
+															<li className="details__tooltip">
+																<Image
+																	src={images.java}
+																	width={24}
+																	height={24}
+																	alt="java-icon"
+																/>
+															</li>
+														</Tippy>
+														<Tippy label="Maven">
+															<li className="details__tooltip">
+																<Image
+																	src={images.maven}
+																	width={24}
+																	height={24}
+																	alt="maven-icon"
+																/>
+															</li>
+														</Tippy>
+													</ul>
+												</>
+											) : (
+												<></>
 											)}
 										</div>
 									</div>
@@ -149,7 +242,11 @@ const Projects = ({ projectsRef }: Props) => {
 						})
 					) : (
 						<>
-							<p>loading</p>
+							<div className="projects__project">
+								<div className="v-stack">
+									<div className="skeleton-content"></div>
+								</div>
+							</div>
 						</>
 					)
 				)}

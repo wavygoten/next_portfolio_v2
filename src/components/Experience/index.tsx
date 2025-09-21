@@ -91,23 +91,12 @@ const Experience = ({ experienceRef }: Props) => {
 						})
 					) : (
 						<>
-							<p>loading</p>
+							<div className="experiences__experience">
+								<div className="skeleton-content"></div>
+							</div>
 						</>
 					)
 				)}
-				{/* <div className="experience__repos">
-					<div className="experience__repo">
-						<div className="repo__title">
-							<div className="repo__title-icon"></div>
-							<div className="repo__title-title">MERN-session-auth</div>
-						</div>
-						<div className="repo__description">desc</div>
-						<div className="repo__details">
-							<div className="repo__detail">.</div>
-							<div className="repo__detail">Typescript</div>
-						</div>
-					</div>
-				</div> */}
 			</FadeIn>
 		</section>
 	);

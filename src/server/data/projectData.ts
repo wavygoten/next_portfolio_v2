@@ -11,10 +11,22 @@ export const data = [
 			"A project to find the nearest in stock COVID-19 vaccine. All you have to do is enter your zip code and it will pull up the nearest pharmacies and their info based on approximity.",
 		link: "https://github.com/wavygoten/vaccine-finder",
 	},
-	// {
-	// 	title: "MERN Session Auth (Login + Register + Reset Password + Dashboard)",
-	// 	message:
-	// 		"For this project, I utilized the MERN stack which allows full authentication control from frontend to backend systems. This uses express-session in the backend server to retain session control within the frontend.",
-	// 	link: "https://github.com/wavygoten/MERN-session-auth/tree/master",
-	// },
+	{
+		title: "MERN Auth Dashboard",
+		message:
+			"For this project, I utilized the MERN stack which allows full authentication control from frontend to backend systems.",
+		link: "https://github.com/wavygoten/MERN-session-auth/tree/master",
+	},
+	{
+		title: "NFT Mint Automation",
+		message:
+			"Mint your erc tokens with this mint bot as soon as the contract goes live, send your txn instantaneously.",
+		link: "https://github.com/wavygoten/nft-mint-bot",
+	},
+
+	{
+		title: "Baccarat Casino Game",
+		message: "Bacarrat Project made in Java, JavaFX, and Maven",
+		link: "https://github.com/wavygoten/Bacarrat_Project",
+	},
 ];

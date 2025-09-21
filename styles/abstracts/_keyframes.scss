@@ -42,3 +42,21 @@
 		transform: rotate(0deg);
 	}
 }
+
+@keyframes skeletonSlide {
+	from {
+		left: -100px;
+	}
+	to {
+		left: calc(100% + 100px);
+	}
+}
+
+@keyframes animatedBackground {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 1000px 0;
+	}
+}
