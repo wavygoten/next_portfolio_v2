@@ -31,7 +31,23 @@
 			font-size: get-font-size("sm");
 			font-weight: get-font-weight("regular");
 		}
+
+		.details__tooltips {
+			display: flex;
+			flex-flow: row wrap;
+			li {
+				cursor: pointer;
+				margin: 1rem 1.5rem 0 0;
+				@extend .center-image;
+				opacity: 0.7;
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+
 		// .center-image {
+
 		// 	margin-left: 2rem;
 		// 	border-radius: 5px;
 		// 	overflow: hidden;

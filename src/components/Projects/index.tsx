@@ -2,6 +2,8 @@ import { MutableRefObject, useState, useEffect, Children } from "react";
 import Image from "next/image";
 import { images } from "../../utils/images";
 import { FadeIn } from "../Animations";
+import Tippy from "../Utils/Tippy";
+
 type Props = {
 	projectsRef: React.MutableRefObject<HTMLDivElement | null>;
 };
@@ -37,22 +39,110 @@ const Projects = ({ projectsRef }: Props) => {
 										<div className="v-stack">
 											<div className="project__title">{v.title}</div>
 											<p className="project__subtitle">{v.message}</p>
+											{i == 0 ? (
+												<>
+													<ul className="details__tooltips stack">
+														<Tippy label="ReactJS">
+															<li className="details__tooltip">
+																<Image
+																	src={images.reactjs}
+																	width={24}
+																	height={24}
+																	alt="reactjs-icon"
+																/>
+															</li>
+														</Tippy>
+														<Tippy label="Typescript">
+															<li className="details__tooltip">
+																<Image
+																	src={images.typescript}
+																	width={24}
+																	height={24}
+																	alt="typescript-icon"
+																/>
+															</li>
+														</Tippy>
+
+														<Tippy label="HTML">
+															<li className="details__tooltip">
+																<Image
+																	src={images.html5}
+																	width={24}
+																	height={24}
+																	alt="html5-icon"
+																/>
+															</li>
+														</Tippy>
+														<Tippy label="CSS">
+															<li className="details__tooltip">
+																<Image
+																	src={images.css3}
+																	width={24}
+																	height={24}
+																	alt="css3-icon"
+																/>
+															</li>
+														</Tippy>
+														<Tippy label="PostgreSQL">
+															<li className="details__tooltip">
+																<Image
+																	src={images.postgresql}
+																	width={24}
+																	height={24}
+																	alt="css3-icon"
+																/>
+															</li>
+														</Tippy>
+													</ul>
+												</>
+											) : (
+												<>
+													<ul className="details__tooltips stack">
+														<Tippy label="ReactJS">
+															<li className="details__tooltip">
+																<Image
+																	src={images.reactjs}
+																	width={24}
+																	height={24}
+																	alt="reactjs-icon"
+																/>
+															</li>
+														</Tippy>
+
+														<Tippy label="Javascript">
+															<li className="details__tooltip">
+																<Image
+																	src={images.javascript}
+																	width={24}
+																	height={24}
+																	alt="javascript-icon"
+																/>
+															</li>
+														</Tippy>
+														<Tippy label="HTML">
+															<li className="details__tooltip">
+																<Image
+																	src={images.html5}
+																	width={24}
+																	height={24}
+																	alt="html5-icon"
+																/>
+															</li>
+														</Tippy>
+														<Tippy label="CSS">
+															<li className="details__tooltip">
+																<Image
+																	src={images.css3}
+																	width={24}
+																	height={24}
+																	alt="css3-icon"
+																/>
+															</li>
+														</Tippy>
+													</ul>
+												</>
+											)}
 										</div>
-										{/* 
-										<div className="center-image">
-											<Image
-												src={
-													i == 0
-														? images.tswebapp
-														: i == 1
-														? images.loginpage
-														: images.vaccineradar
-												}
-												width={360}
-												height={180}
-												alt="ts-web"
-											/>
-										</div> */}
 									</div>
 								</a>
 							);
