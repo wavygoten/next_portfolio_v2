@@ -25,3 +25,16 @@
 button {
 	cursor: pointer;
 }
+
+.content {
+	.name {
+		color: rgb(54, 142, 201);
+	}
+	.blinking-cursor {
+		display: inline-block;
+		height: 1.75rem;
+		width: 1.5px;
+		transform: translateY(0.25rem);
+		background-color: rgb(54, 142, 201);
+	}
+}

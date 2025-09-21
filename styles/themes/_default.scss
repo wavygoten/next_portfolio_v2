@@ -58,6 +58,9 @@
 			background-color: $dark-grey;
 		}
 	}
+	.blinking-cursor {
+		// background-color: rgb(54, 142, 201);
+	}
 }
 
 .theme[data-theme="light"] {
@@ -119,5 +122,10 @@
 		&:hover {
 			background-color: $light-grey;
 		}
+	}
+
+	.blinking-cursor {
+		// background-color: get-theme("bgDark");
+		// background-color: rgb(54, 142, 201);
 	}
 }

@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { images } from "../../utils/images";
 import Tippy from "../Utils/Tippy";
-import { FadeIn } from "../Animations";
+import { FadeIn, ContentName } from "../Animations";
 import Spotify from "./Spotify";
 type Props = {
 	contentRef: React.MutableRefObject<HTMLDivElement | null>;
@@ -18,7 +18,9 @@ const Content = ({ contentRef, handleScrollClick }: Props) => {
 						<div className="details__subtitle">
 							Hey! Welcome to my Portfolio
 						</div>
-						<div className="details__title">You can call me Ihsaan</div>
+						<div className="details__title">
+							You can call me <ContentName className="name">Ihsaan</ContentName>
+						</div>
 						<p className="details__description">
 							I{"'"}m an aspiring engineer living in Chicago, IL
 						</p>

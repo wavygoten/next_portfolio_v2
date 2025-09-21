@@ -1,11 +1,4 @@
-import React, {
-	FC,
-	Fragment,
-	useContext,
-	useRef,
-	useEffect,
-	ButtonHTMLAttributes,
-} from "react";
+import { FC, Fragment, useContext, useRef } from "react";
 import { AppContext } from "../store/context";
 import {
 	Header,
@@ -61,11 +54,6 @@ const Main: FC<Props> = () => {
 		}
 	};
 
-	const handleJobDescClick = (e: React.MouseEvent<HTMLButtonElement>): void => {
-		e.preventDefault();
-		dispatch({ type: "isJobDescOpen", payload: !state.isJobDescOpen });
-	};
-
 	const handleInputChange = (
 		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
 	): void => {
@@ -88,13 +76,8 @@ const Main: FC<Props> = () => {
 					contentRef={ContentRef}
 					handleScrollClick={handleScrollClick}
 				/>
-				<div className="about_me container">
-					<Experience
-						experienceRef={ExperienceRef}
-						// handleJobDescClick={handleJobDescClick}
-					/>
-					<Projects projectsRef={ProjectsRef} />
-				</div>
+				<Experience experienceRef={ExperienceRef} />
+				<Projects projectsRef={ProjectsRef} />
 
 				<Contact
 					contactRef={ContactRef}

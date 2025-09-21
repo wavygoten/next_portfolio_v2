@@ -9,13 +9,6 @@ type Props = {
 
 const Experience = ({ experienceRef }: Props) => {
 	const [data, setData] = useState([]);
-	const { state, dispatch } = useContext(AppContext);
-	const [openJobIndex, setOpenJobIndex] = useState<number | null>(null);
-
-	const handleJobDescClick = (i: number) => {
-		setOpenJobIndex(openJobIndex === i ? null : i);
-	};
-
 	useEffect(() => {
 		fetch("/api/experience")
 			.then((res) => res.json())
