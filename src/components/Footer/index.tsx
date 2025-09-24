@@ -17,7 +17,7 @@ const Footer = ({ isDark }: Props) => {
 						</li>
 					</a>
 					<a
-						href="https://github.com/wavygoten"
+						href="https://github.com/ihsaanb"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
